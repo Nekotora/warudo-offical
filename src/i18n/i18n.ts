@@ -14,6 +14,16 @@ const resources = {
         "faq": "FAQ",
         "document": "Document",
         "download": "Download",
+      },
+      sloganText1: {
+        "Livestream software": "Livestream software",
+        "3D animation engine": "3D animation engine",
+      },
+      sloganText2: {
+        "Avatars": "Avatars",
+        "Virtual youtuber": "Virtual youtuber",
+        "Motion capture": "Motion capture",
+        "Broad casting": "Broad casting",
       }
     }
   },

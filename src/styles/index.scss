@@ -32,6 +32,66 @@ body {
   margin: 0 auto;
 }
 
+.site-header{
+  height: 100px;
+  transition: .3s all;
+  &.active{
+    height: 500px;
+  }
+
+  .slogan{
+    display: flex;
+
+    margin: 20px 0;
+    span{
+      display: inline-block;
+      position: relative;
+      b{
+        display: inline-block;
+        white-space: nowrap;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+      }
+    }
+    .text-box{
+      transition: .3s all;
+    }
+    .dot{
+      padding: 0 10px;
+    }
+    .animate-exiting{
+      animation: textExiting .3s ease-in-out forwards;
+    }
+    .animate-entering{
+      animation: textEntering .3s ease-in-out forwards;
+    }
+  }
+
+  @keyframes textExiting {
+    from {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  
+    to {
+      transform: translateY(10px);
+      opacity: 0;
+    }
+  }
+  @keyframes textEntering {
+    from {
+      transform: translateY(-10px);
+      opacity: 0;
+    }
+  
+    to {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+}
+
 .site-nav{
   padding: 20px 0;
   .container{
