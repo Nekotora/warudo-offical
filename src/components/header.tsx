@@ -42,37 +42,45 @@ export function SiteHeader() {
       setText((text) => {
         return [[newA, newB], text[0]]
       });
-    }, 1000)
+    }, 2000)
     return () => clearInterval(t)
   }, []);
 
   useLayoutEffect(() => {
-    const exiting: Keyframe[] = [{ transform: 'translateY(0px)', opacity: 1 }, { transform: 'translateY(10px)', opacity: 0 }];
-    const entering: Keyframe[] = [{ transform: 'translateY(-10px)', opacity: 0 }, { transform: 'translateY(0px)', opacity: 1 }];
+    const exiting: Keyframe[] = [
+      { transform: 'translateX(0px)', opacity: 1 },
+      { transform: 'translateX(10px)', opacity: 0 }
+    ];
+    const entering: Keyframe[] = [
+      { transform: 'translateY(-10px)', opacity: 0 },
+      { transform: 'translateY(0px)', opacity: 1 }
+    ];
 
-    text1BoxRef.current!.children[0].animate(exiting, { duration: 300, easing: 'ease-in-out', fill: 'forwards' }).play()
-    text1BoxRef.current!.children[1].animate(entering, { duration: 300, easing: 'ease-in-out', fill: 'forwards' }).play()
+    text1BoxRef.current!.children[0].animate(exiting, { duration: 500, easing: 'ease-in-out', fill: 'forwards' }).play()
+    text1BoxRef.current!.children[1].animate(entering, { duration: 500, easing: 'ease-in-out', fill: 'forwards' }).play()
 
-    text2BoxRef.current!.children[0].animate(exiting, { duration: 300, easing: 'ease-in-out', fill: 'forwards' }).play()
-    text2BoxRef.current!.children[1].animate(entering, { duration: 300, easing: 'ease-in-out', fill: 'forwards' }).play()
+    text2BoxRef.current!.children[0].animate(exiting, { duration: 500, easing: 'ease-in-out', fill: 'forwards' }).play()
+    text2BoxRef.current!.children[1].animate(entering, { duration: 500, easing: 'ease-in-out', fill: 'forwards' }).play()
     text1BoxRef.current!.style.width = text1Ref.current!.offsetWidth + 'px';
     text2BoxRef.current!.style.width = text2Ref.current!.offsetWidth + 'px';
   }, [text])
 
   return (
     <div className={`site-header ${isActive ? 'active' : ''}`}>
-      <div className="">{isActive ? 'active' : ''}</div>
-      <div className="container">
-        <div className="slogan">
-          <span className="text-box" ref={text1BoxRef}>
-            <b>{text[1][0]}</b>
-            <b ref={text1Ref}>{text[0][0]}</b>
-          </span>
-          <span className="dot">for</span>
-          <span className="text-box" ref={text2BoxRef}>
-            <b>{text[1][1]}</b>
-            <b ref={text2Ref}>{text[0][1]}</b>
-          </span>
+      {/* <div className="">{isActive ? 'active' : ''}</div> */}
+      <div className="inner">
+        <div className="container">
+          <div className="slogan">
+            <span className="text-box text-box-1" ref={text1BoxRef}>
+              <b>{text[1][0]}</b>
+              <b ref={text1Ref}>{text[0][0]}</b>
+            </span>
+            <span className="dot">for</span>
+            <span className="text-box text-box-2" ref={text2BoxRef}>
+              <b>{text[1][1]}</b>
+              <b ref={text2Ref}>{text[0][1]}</b>
+            </span>
+          </div>
         </div>
       </div>
     </div>

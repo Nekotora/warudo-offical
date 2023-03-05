@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { createRef } from 'react'
 import ReactDOM from 'react-dom/client'
 import {
   createBrowserRouter,
@@ -15,25 +15,34 @@ import './i18n/i18n';
 import './styles/normalize.scss';
 import './styles/index.scss'
 
-const router = createBrowserRouter([
+export const routes = [
+  {
+    path: "/",
+    element: <IndexPage />,
+    nodeRef: createRef()
+  },
+  {
+    path: "/pricing",
+    element: <PricingPage />,
+    nodeRef: createRef()
+  },
+  {
+    path: "/faq",
+    element: <FaqPage />,
+    nodeRef: createRef()
+  },
+];
+
+export const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
     errorElement: <ErrorPage />,
-    children: [
-      {
-        path: "/",
-        element: <IndexPage />,
-      },
-      {
-        path: "/pricing",
-        element: <PricingPage />,
-      },
-      {
-        path: "/faq",
-        element: <FaqPage />,
-      },
-    ],
+    children: routes.map((route) => ({
+      index: route.path === '/',
+      path: route.path === '/' ? undefined : route.path,
+      element: route.element,
+    })),
   },
 ]);
 

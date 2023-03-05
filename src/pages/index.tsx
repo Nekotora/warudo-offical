@@ -3,7 +3,11 @@ export function IndexPage() {
     <>
       <div className="page">
         <div className="container">
-          <h1>Index</h1>
+          <div className="intro">
+            <div className="item"></div>
+            <div className="item"></div>
+            <div className="item"></div>
+          </div>
         </div>
       </div>
     </>

@@ -36,6 +36,10 @@ export function SiteNav() {
             <span className="icon">
               <IoOpenOutline />
             </span></div></a>
+            <a href=""><div className="item">{t('nav.discord')}
+            <span className="icon">
+              <IoOpenOutline />
+            </span></div></a>
         </div>
         <div className="right">
           <div className="item item-button">{t('nav.download')}</div>
