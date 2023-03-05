@@ -23,9 +23,88 @@ export function IndexPage() {
         <div className="container point-block">
           <div className="block">
             <div className="left">
-              <div className="title"></div>
+              <div className="title-box">
+                <h4>轻松上手</h4>
+                <h2>
+                  3D开播<br />
+                  如此轻松愉快
+                </h2>
+                <p>加载模型，设置动补，开始直播。</p>
+              </div>
+              <a href="#">
+                <div className="button"></div>
+              </a>
             </div>
             <div className="right">
+              <div className="tag-list">
+                <div></div>
+              </div>
+            </div>
+          </div>
+
+          <div className="block">
+            <div className="left">
+              <div className="title-box">
+                <h4>强大拓展性</h4>
+                <h2>
+                  详细设置<br />
+                  如此轻松愉快
+                </h2>
+              </div>
+            </div>
+            <div className="right">
+              <div className="tag-list">
+                <div></div>
+              </div>
+            </div>
+          </div>
+
+          <div className="block">
+            <div className="left">
+              <div className="title-box">
+                <h4>专业功能</h4>
+                <h2>
+                  蓝图、SDK、Mod<br />
+                  像制作游戏一样专业
+                </h2>
+              </div>
+            </div>
+            <div className="right">
+              <div className="tag-list">
+                <div></div>
+              </div>
+            </div>
+          </div>
+
+          <div className="block">
+            <div className="left">
+              <div className="title-box">
+                <h4>分享&创造</h4>
+                <h2>
+                  使用<br />
+                  Steam创意工坊<br />
+                  轻松获取和分享
+                </h2>
+              </div>
+            </div>
+            <div className="right">
+              <div className="tag-list">
+                <div></div>
+              </div>
+            </div>
+          </div>
+
+
+          <div className="block">
+            <div className="left">
+              <div className="title-box">
+                <h2>更多功能</h2>
+              </div>
+            </div>
+            <div className="right">
+              <div className="tag-list">
+                <div></div>
+              </div>
             </div>
           </div>
         </div>
@@ -34,7 +113,7 @@ export function IndexPage() {
           <div className="block">
             <div className="left">
               <div className="title-box">
-                <h2>Price</h2>
+                <h2>为个人创作者</h2>
               </div>
             </div>
             <div className="content">
@@ -76,7 +155,7 @@ export function IndexPage() {
             <div className="content">
               <div className="faq-list">
                 <div className="item">
-                  <h4>关于Warudo的使用授权</h4>
+                  <h4>关于Warudo的使用授权？</h4>
                   <div className="content">
                     <p>非直播用途下，Warudo可以免费使用，例如测试模型，截图发布在SNS等。</p>
                     <p>（事先录制再直播播放，视为直播用途）</p>
@@ -93,6 +172,24 @@ export function IndexPage() {
             <div className="left">
               <div className="title-box">
                 <h2>Download</h2>
+              </div>
+            </div>
+            <div className="content">
+              <div className="download-list">
+                <div className="button-steam-download">
+                  <img src="/images/steam.svg" />
+                  <span>Get it on Steam</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="container price-block">
+          <div className="block">
+            <div className="left">
+              <div className="title-box">
+                <h2>Community</h2>
               </div>
             </div>
             <div className="content">

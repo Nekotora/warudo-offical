@@ -38,7 +38,7 @@ body {
 }
 
 .block{
-  padding: 40px 0;
+  padding: 60px 0;
 }
 
 .site-header {
@@ -248,7 +248,7 @@ body {
 
     .list {
       width: 40%;
-      background-color: #353535;
+      background-color: #2f2f2f;
       padding: 30px 40px;
       border-radius: 10px;
 
@@ -279,7 +279,16 @@ body {
 
 .faq-list{
   .item{
-    
+    h4{
+      margin-bottom: 20px;
+    }
+    .content{
+      font-size: 14px;
+      color: #ccc;
+      line-height: 2;
+      padding-left: 40px;
+      border-left: 5px solid rgba(255, 255, 255, 0.2);
+    }
   }
 }
 
@@ -291,12 +300,13 @@ body {
     .item{
       flex-grow: 0;
       flex-shrink: 1;
-      width: 30%;
-      background-color: #333333;
-      padding: 40px 20px;
+      width: 31.5%;
+      background-color: #2f2f2f;
+      padding: 40px 30px;
       box-sizing: border-box;
       text-align: center;
       border-radius: 10px;
+      box-shadow: 0 0 40px rgba(0,0,0,.2);
       h3{
         margin: 0;
         margin-bottom: 20px;
@@ -331,8 +341,11 @@ body {
 
 .site-footer{
   margin-top: 80px;
-  background-color: #333333;
+  background-color: #2f2f2f;
   padding: 80px;
+  img.logo{
+    height: 40px;
+  }
 }
 
 
