@@ -14,6 +14,10 @@
   -webkit-text-size-adjust: 100%;
 }
 
+h1, h2, h3, h4, h5, h6, p{
+  margin: 0;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -33,13 +37,39 @@ body {
   margin: 0 auto;
 }
 
+.block{
+  padding: 40px 0;
+}
+
 .site-header {
   height: 300px;
   transition: .8s all ease-in-out;
   position: relative;
 
   &.active {
-    height: 500px;
+    height: 600px;
+  }
+
+  .background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150%;
+    z-index: -2;
+    background: url(/images/intro-background.jpg);
+    background-size: cover;
+    background-position: center center;
+    &::after{
+      content: "";
+      position: absolute;
+      z-index: -1;
+      bottom: 0;
+      left: 0;
+      height: 80%;
+      width: 100%;
+      background-image: linear-gradient(to top, rgba(33,33,33,1),rgba(33,33,33,0));
+    }
   }
 
   .inner {
@@ -47,6 +77,10 @@ body {
     bottom: 0;
     left: 0;
     width: 100%;
+
+    img.logo{
+      height: 80px;
+    }
 
     .slogan {
 
@@ -179,7 +213,35 @@ body {
   }
 }
 
-.price-page {
+.title-box{
+  margin-bottom: 40px;
+  h2{
+    position: relative;
+    font-size: 42px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: rgba(34, 139, 237, 1);
+    background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(rgba(34, 139, 237, 1)), to(rgba(0, 240, 255, 1)));
+    &::after{
+      content: "";
+      position: absolute;
+      bottom: 10px;
+      left: 0;
+      width: 80px;
+      height: 10px;
+      border-radius: 5px;
+      background-color: rgb(0, 240, 255);
+      opacity: 0.3;
+      box-shadow: 0 3px 7px rgb(0 240 255 / 80%);
+    }
+  }
+  h4{
+    font-weight: normal;
+    font-size: 15px;
+  }
+}
+
+.price-block {
   .price-lists {
     display: flex;
     justify-content: space-between;
@@ -188,28 +250,82 @@ body {
       width: 40%;
       background-color: #353535;
       padding: 30px 40px;
-      border-radius: 20px;
+      border-radius: 10px;
 
-      .type {
-        font-size: 32px;
-        margin: 0;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+      .price{
         margin-bottom: 20px;
+        h2 {
+          font-size: 32px;
+          margin: 0;
+        }
       }
+
     }
 
     .list-1 {
-      .type {
-        background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(rgba(0, 240, 255, 1)), to(rgba(255, 255, 255, 1)));
+      h2 {
+        color: rgba(34, 139, 237, 1);
+    
       }
     }
 
     .list-2 {
-      .type {
-        background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(rgba(255, 63, 90, 1)), to(rgba(255, 255, 255, 1)));
+      h2 {
+        color: rgba(255, 63, 90, 1);
       }
     }
+  }
+}
+
+.faq-list{
+  .item{
+    
+  }
+}
+
+.index-page {
+  .intro{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    .item{
+      flex-grow: 0;
+      flex-shrink: 1;
+      width: 30%;
+      background-color: #333333;
+      padding: 40px 20px;
+      box-sizing: border-box;
+      text-align: center;
+      border-radius: 10px;
+      h3{
+        margin: 0;
+        margin-bottom: 20px;
+      }
+      p{
+        font-size: 13px;
+        color: #999;
+      }
+    }
+  }
+
+  .download-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.button-steam-download{
+  background: linear-gradient(to left, rgba(111,160,205, 1), rgba(67,98,129, 1));
+  display: inline-flex;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  img{
+    width: 40px;
+    height: 40px;
+    padding-right: 10px;
   }
 }
 

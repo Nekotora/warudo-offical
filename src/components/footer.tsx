@@ -6,7 +6,7 @@ export function SiteFooter() {
         </div>
         <div className="">
           <div className="button-steam-download">
-            <img src="/steam.svg" />
+            <img src="/images/steam.svg" />
             <span>Get it on Steam</span>
           </div>
         </div>

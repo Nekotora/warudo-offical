@@ -68,8 +68,10 @@ export function SiteHeader() {
   return (
     <div className={`site-header ${isActive ? 'active' : ''}`}>
       {/* <div className="">{isActive ? 'active' : ''}</div> */}
+      <div className="background"></div>
       <div className="inner">
         <div className="container">
+          <img className="logo" src="/images/logo.png" />
           <div className="slogan">
             <span className="text-box text-box-1" ref={text1BoxRef}>
               <b>{text[1][0]}</b>
