@@ -22,10 +22,8 @@ jobs:
       - name: Install dependencies
         uses: borales/actions-yarn@v4
 
-      - name: Build production bundle
-        uses: borales/actions-yarn@v4
-        with:
-          cmd: build
+      - name: Build project
+        run: npm run build
 
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v3
@@ -37,7 +35,7 @@ jobs:
     name: Deploy
     needs: build
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/master'
 
     steps:
       - name: Download artifact
