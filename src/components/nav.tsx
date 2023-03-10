@@ -17,13 +17,13 @@ export function SiteNav() {
           >
             <div className="item">{t('nav.index')}</div>
           </NavLink>
-          <NavLink
+          {/* <NavLink
             to="/pricing"
             className={({ isActive }) =>
               isActive ? 'active' : undefined
             }
           ><div className="item">{t('nav.pricing')}</div>
-          </NavLink>
+          </NavLink> */}
           <NavLink
             to="/faq"
             className={({ isActive }) =>

@@ -1,3 +1,6 @@
+import { BsSteam } from "react-icons/bs";
+import { IoLogoDiscord, IoLogoTwitter } from "react-icons/io5";
+
 export function IndexPage() {
   return (
     <>
@@ -36,9 +39,6 @@ export function IndexPage() {
               </a>
             </div>
             <div className="right">
-              <div className="tag-list">
-                <div></div>
-              </div>
             </div>
           </div>
 
@@ -54,9 +54,6 @@ export function IndexPage() {
               </div>
             </div>
             <div className="right">
-              <div className="tag-list">
-                <div></div>
-              </div>
             </div>
           </div>
 
@@ -75,9 +72,6 @@ export function IndexPage() {
               </div>
             </div>
             <div className="right">
-              <div className="tag-list">
-                <div></div>
-              </div>
             </div>
           </div>
 
@@ -94,9 +88,6 @@ export function IndexPage() {
               </div>
             </div>
             <div className="right">
-              <div className="tag-list">
-                <div></div>
-              </div>
             </div>
           </div>
 
@@ -125,7 +116,7 @@ export function IndexPage() {
           <div className="block">
             <div className="left">
               <div className="title-box">
-                <h2>为个人创作者</h2>
+                <h2>Price</h2>
               </div>
             </div>
             <div className="content">
@@ -137,8 +128,6 @@ export function IndexPage() {
                   </div>
                   <div className="features">
                     <div className="item">list1</div>
-                    <div className="item">list2</div>
-                    <div className="item">list3</div>
                   </div>
                   <div className="action">
                     <div className="button">Download</div>
@@ -150,9 +139,7 @@ export function IndexPage() {
                     <p>Contact us</p>
                   </div>
                   <div className="features">
-                    <div className="item">企业支持</div>
-                    <div className="item"></div>
-                    <div className="item">list3</div>
+                    <div className="item">list2</div>
                   </div>
                   <div className="action">
                     <div className="button">Contact Us</div>
@@ -194,9 +181,9 @@ export function IndexPage() {
             </div>
             <div className="content">
               <div className="download-list">
-                <a href="#">
+              <a href="#">
                 <div className="button-steam-download">
-                  <img src="/images/steam.svg" />
+                  <span className="icon"><BsSteam /></span>
                   <span>Get it on Steam</span>
                 </div>
                 </a>
@@ -216,8 +203,14 @@ export function IndexPage() {
               <div className="download-list">
               <a href="#">
                 <div className="button-steam-download">
-                  <img src="/images/steam.svg" />
-                  <span>Get it on Steam</span>
+                  <span className="icon"><IoLogoTwitter /></span>
+                  <span>Twitter</span>
+                </div>
+                </a>
+                <a href="#">
+                <div className="button-steam-download">
+                  <span className="icon"><IoLogoDiscord /></span>
+                  <span>Discord</span>
                 </div>
                 </a>
               </div>

@@ -350,12 +350,18 @@ body {
 
   .download-list{
     display: flex;
-    justify-content: center;
-    align-items: center;
   }
 }
 
 .point-block{
+  .title-box{
+    h2{
+      &::after{
+        content: '';
+        display: none;
+      }
+    }
+  }
   .lr-box,
   .rl-box{
     display: flex;
@@ -381,6 +387,12 @@ body {
   }
 }
 
+.download-list{
+  > a {
+    margin-right: 20px;
+  }
+}
+
 .button-steam-download{
   background: linear-gradient(to left, rgba(111,160,205, 1), rgba(67,98,129, 1));
   display: inline-flex;
@@ -389,9 +401,8 @@ body {
   align-items: center;
   border-radius: 10px;
   transition: .3s all;
-  img{
-    width: 40px;
-    height: 40px;
+  .icon{
+    font-size: 40px;
     padding-right: 10px;
   }
 
