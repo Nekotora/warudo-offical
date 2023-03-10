@@ -21,7 +21,7 @@ export function IndexPage() {
 
 
         <div className="container point-block">
-          <div className="block">
+          <div className="block lr-box">
             <div className="left">
               <div className="title-box">
                 <h4>轻松上手</h4>
@@ -42,14 +42,15 @@ export function IndexPage() {
             </div>
           </div>
 
-          <div className="block">
+          <div className="block rl-box">
             <div className="left">
               <div className="title-box">
-                <h4>强大拓展性</h4>
+                <h4>拓展性</h4>
                 <h2>
-                  详细设置<br />
-                  如此轻松愉快
+                  让每个物种都能轻松使用的<br />
+                  专业设置
                 </h2>
+                <p>不只是模型，表情，</p>
               </div>
             </div>
             <div className="right">
@@ -67,6 +68,10 @@ export function IndexPage() {
                   蓝图、SDK、Mod<br />
                   像制作游戏一样专业
                 </h2>
+                <p>
+                  Warudo具有可视化编程的能力，<br />
+                你可以讲3D组件中的部分编程交互
+                </p>
               </div>
             </div>
             <div className="right">
@@ -76,7 +81,7 @@ export function IndexPage() {
             </div>
           </div>
 
-          <div className="block">
+          <div className="block rl-box">
             <div className="left">
               <div className="title-box">
                 <h4>分享&创造</h4>
@@ -85,6 +90,7 @@ export function IndexPage() {
                   Steam创意工坊<br />
                   轻松获取和分享
                 </h2>
+                <p>Warudo可以使用Steam工坊进行模型动作的分享，也可以将配置好的方案发送给朋友使用。</p>
               </div>
             </div>
             <div className="right">
@@ -103,7 +109,13 @@ export function IndexPage() {
             </div>
             <div className="right">
               <div className="tag-list">
-                <div></div>
+                {
+                  [
+                    '镜头效果', '布娃娃', 'IK', '时间轴动画'
+                  ].map((item) => {
+                    return (<div>{item}</div>)
+                  })
+                }
               </div>
             </div>
           </div>
@@ -120,13 +132,16 @@ export function IndexPage() {
               <div className="price-lists">
                 <div className="list list-1">
                   <div className="price">
-                    <h2>personal user</h2>
+                    <h2>Personal User</h2>
                     <p>Free*</p>
                   </div>
                   <div className="features">
                     <div className="item">list1</div>
                     <div className="item">list2</div>
                     <div className="item">list3</div>
+                  </div>
+                  <div className="action">
+                    <div className="button">Download</div>
                   </div>
                 </div>
                 <div className="list list-2">
@@ -135,9 +150,12 @@ export function IndexPage() {
                     <p>Contact us</p>
                   </div>
                   <div className="features">
-                    <div className="item">list1</div>
-                    <div className="item">list2</div>
+                    <div className="item">企业支持</div>
+                    <div className="item"></div>
                     <div className="item">list3</div>
+                  </div>
+                  <div className="action">
+                    <div className="button">Contact Us</div>
                   </div>
                 </div>
               </div>
@@ -176,10 +194,12 @@ export function IndexPage() {
             </div>
             <div className="content">
               <div className="download-list">
+                <a href="#">
                 <div className="button-steam-download">
                   <img src="/images/steam.svg" />
                   <span>Get it on Steam</span>
                 </div>
+                </a>
               </div>
             </div>
           </div>
@@ -194,10 +214,12 @@ export function IndexPage() {
             </div>
             <div className="content">
               <div className="download-list">
+              <a href="#">
                 <div className="button-steam-download">
                   <img src="/images/steam.svg" />
                   <span>Get it on Steam</span>
                 </div>
+                </a>
               </div>
             </div>
           </div>

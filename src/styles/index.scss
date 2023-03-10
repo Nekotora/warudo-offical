@@ -20,12 +20,12 @@ h1, h2, h3, h4, h5, h6, p{
 
 a {
   font-weight: 500;
-  color: #646cff;
   text-decoration: inherit;
+  color: initial;
 }
 
 a:hover {
-  color: #535bf2;
+  color: initial;
 }
 
 body {
@@ -39,6 +39,14 @@ body {
 
 .block{
   padding: 60px 0;
+}
+
+.button{
+  background-color: #228BED;
+  color: #fff;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 100px;
 }
 
 .site-header {
@@ -238,6 +246,17 @@ body {
   h4{
     font-weight: normal;
     font-size: 15px;
+    margin-bottom: 10px;
+    background-color: #313131;
+    border-radius: 100px;
+    display: inline-block;
+    padding: 5px 20px;
+  }
+  p{
+    line-height: 2;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #efefef;
   }
 }
 
@@ -260,6 +279,17 @@ body {
         }
       }
 
+      .features{
+        line-height: 2;
+        flex: 2;
+        .item{
+
+        }
+      }
+
+    }
+    .action{
+      margin-top: 20px;
     }
 
     .list-1 {
@@ -325,6 +355,32 @@ body {
   }
 }
 
+.point-block{
+  .lr-box,
+  .rl-box{
+    display: flex;
+
+  }
+
+  .rl-box{
+    flex-direction: row-reverse;
+    .title-box{
+      text-align: right;
+    }
+  }
+
+  .tag-list{
+    display: flex;
+    flex-wrap: wrap;
+    div{
+      background-color: #313131;
+      padding: 5px 20px;
+      border-radius: 100px;
+      margin: 0 15px 15px 0;
+    }
+  }
+}
+
 .button-steam-download{
   background: linear-gradient(to left, rgba(111,160,205, 1), rgba(67,98,129, 1));
   display: inline-flex;
@@ -332,10 +388,15 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 10px;
+  transition: .3s all;
   img{
     width: 40px;
     height: 40px;
     padding-right: 10px;
+  }
+
+  &:hover{
+    transform: translateY(-5px);
   }
 }
 
