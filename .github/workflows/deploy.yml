@@ -20,10 +20,12 @@ jobs:
           node-version: 16
 
       - name: Install dependencies
-        uses: bahmutov/npm-install@v1
+        uses: borales/actions-yarn@v4
 
-      - name: Build project
-        run: npm run build
+      - name: Build production bundle
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: build
 
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v3
